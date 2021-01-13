@@ -1,0 +1,7 @@
+-overwrite
+-use_input_sc
+-nstruct 1
+-holes:dalphaball /work/sheffler/bin/DAlphaBall.gcc
+-linmem_ig 10
+-multi_cool_annealer 10
+-use_bicubic_interpolation

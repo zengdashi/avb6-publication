@@ -1,0 +1,26 @@
+<ROSETTASCRIPTS>
+    
+<SCOREFXNS>
+          
+	
+    
+     <SFXN_STD weights= "talaris2013.wts" />
+     
+   
+</SCOREFXNS>
+
+<MOVERS>
+    <Disulfidize name="disulf" min_disulfides="1" max_disulfides="1"  match_rt_limit="1" min_loop="3" scorefxn=SFXN_STD/>
+<FastRelax name="frlx1" scorefxn=SFXN_STD repeats=5 ramp_down_constraints=true min_type=dfpmin_armijo_nonmonotone >
+  </FastRelax>
+</MOVERS>
+    
+    
+
+<PROTOCOLS>
+	<Add mover=disulf />
+        <Add mover=frlx1/>
+  
+</PROTOCOLS>
+
+</ROSETTASCRIPTS>
