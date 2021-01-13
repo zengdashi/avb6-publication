@@ -1,0 +1,11 @@
+-database                 /work/shilei/git_rosetta/Rosetta/main/database/
+-in:file:vall             /work/shilei/git_rosetta/Rosetta/tools/fragment_tools/vall.jul19.2011.gz
+#-frags:n_frags            200
+-frags:n_frags            5000
+-frags:frag_sizes         8
+-frags:scoring:config     scores.cfg
+-in:file:fasta            avb6B.fasta
+-in:file:s                clean_chop_mutate_peptide.pdb
+
+-frags:describe_fragments frags.fsc.score
+-out:file:frag_prefix     test.fasta.frags
