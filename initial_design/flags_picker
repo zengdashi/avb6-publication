@@ -1,11 +1,19 @@
 -database                 /work/shilei/git_rosetta/Rosetta/main/database/
+#  指定数据库进行碎片搜索
 -in:file:vall             /work/shilei/git_rosetta/Rosetta/tools/fragment_tools/vall.jul19.2011.gz
+#  指定一个名为vall.jul19.2011.gz的文件作为输入。它可能包含了用于碎片拼接的碎片库。
 #-frags:n_frags            200
 -frags:n_frags            5000
+#  指定碎片数
 -frags:frag_sizes         8
+#  指定碎片大小
 -frags:scoring:config     scores.cfg
+#  指定评分配置文件
 -in:file:fasta            avb6B.fasta
+#  指定输入序列
 -in:file:s                clean_chop_mutate_peptide.pdb
-
+#指定输入结构
 -frags:describe_fragments frags.fsc.score
+#  指定一个名为frags.fsc.score的文件来描述生成的碎片。
 -out:file:frag_prefix     test.fasta.frags
+#  指定输出碎片文件的前缀为test.fasta.frags
